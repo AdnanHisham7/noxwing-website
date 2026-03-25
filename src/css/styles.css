@@ -480,13 +480,16 @@ nav.scrolled {
 }
 
 /* ── HERO ── */
+
 #hero {
-  position: relative;
-  min-height: 100vh;
+  padding: 120px 0 80px;
+}
+
+#hero .container {
   display: flex;
   align-items: center;
-  padding: 120px 0 80px;
-  overflow: hidden;
+  justify-content: space-between;
+  gap: 40px;
 }
 
 @media (min-width: 768px) {
