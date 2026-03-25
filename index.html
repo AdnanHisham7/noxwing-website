@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="theme-color" content="#0f0f0f" />
+    <meta name="googlebot" content="index, follow">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+    <title>NOXWING — Technology Partner for Business Growth</title>
+
+    <meta name="description"
+        content="NOXWING partners with founders and business owners to design, build, and deploy technology that creates real, measurable growth. Web platforms, mobile apps, automation & AI solutions." />
+    <meta name="keywords" content="technology partner, web development, SaaS development, automation, AI solutions, noxwing" />
+    <meta name="author" content="NOXWING" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+
+    <link rel="canonical" href="https://www.noxwing.site/" />
+
+    <!-- CSS -->
+    <link rel="preload" href="/src/css/styles.css" as="style">
+    <link rel="stylesheet" href="/src/css/styles.css" />
+
+    <!-- FAVICONS -->
+    <link rel="icon" href="/public/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/public/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16x16.png">
+    <link rel="manifest" href="/public/site.webmanifest">
+
+    <!-- OPEN GRAPH -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="NOXWING — Technology Partner for Business Growth" />
+    <meta property="og:description" content="We build the tech that scales your business." />
+    <meta property="og:url" content="https://www.noxwing.site/" />
+    <meta property="og:image" content="https://www.noxwing.site/public/og-image.jpg" />
+
+    <!-- TWITTER -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="NOXWING — Technology Partner for Business Growth" />
+    <meta name="twitter:image" content="https://www.noxwing.site/public/og-image.jpg" />
+
+    <!-- SCHEMA (FIXED LOGO PATH) -->
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "NOXWING",
+    "url": "https://www.noxwing.site/",
+    "logo": "https://www.noxwing.site/public/logo.png"
+    }
+    </script>
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Syne&family=DM+Sans&display=swap" rel="stylesheet" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+
+<body>
+
+    <!-- PAGE LOADER -->
+    <div id="page-loader">
+        <div class="loader-orb"></div>
+        <div class="loader-logo">NOX<span>WING</span></div>
+        <div class="loader-bar-wrap">
+            <div class="loader-bar" id="loader-bar"></div>
+        </div>
+        <div class="loader-label" id="loader-label">Initializing…</div>
+    </div>
+
+    <!-- NAV -->
+    <nav id="navbar">
+        <div class="container">
+            <div class="nav-inner">
+                <a href="#" class="nav-logo">NOX<span>WING</span></a>
+                <ul class="nav-links">
+                    <li><a href="#services">Solutions</a></li>
+                    <!-- <li><a href="#work">Work</a></li> -->
+                    <li><a href="#process">Process</a></li>
+                    <!-- <li><a href="#testimonials">Clients</a></li> -->
+                    <li><a href="#cta">Contact</a></li>
+                </ul>
+                <div class="nav-cta">
+                    <a href="#cta" class="btn-ghost">Book a Call</a>
+                    <a href="#cta" class="btn-primary">Start a Project</a>
+                    <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu">
+                        <span></span><span></span><span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="#services" class="mobile-nav-link">Solutions</a>
+        <!-- <a href="#work" class="mobile-nav-link">Work</a> -->
+        <a href="#process" class="mobile-nav-link">Process</a>
+        <!-- <a href="#testimonials" class="mobile-nav-link">Clients</a> -->
+        <a href="#cta" class="mobile-nav-link">Contact</a>
+        <div class="mobile-menu-actions">
+            <a href="#cta" class="btn-outline mobile-nav-link">Book a Call</a>
+            <a href="#cta" class="btn-primary mobile-nav-link">Start a Project</a>
+        </div>
+    </div>
+
+    <!-- HERO -->
+    <section id="hero">
+        <div class="hero-glow"></div>
+        <div class="hero-grid"></div>
+        <div class="container">
+            <div class="hero-content" style="max-width:900px;">
+                <div class="hero-tag reveal">Technology Partner for Business Growth</div>
+                <h1 class="hero-headline reveal reveal-delay-1">We build the tech<br />that <span
+                        class="accent">scales</span> your<br />business.</h1>
+                <p class="hero-sub reveal reveal-delay-2">NOXWING partners with founders and business owners to design,
+                    build, and deploy technology that creates real, measurable growth.</p>
+                <div class="hero-actions reveal reveal-delay-3">
+                    <a href="#cta" class="btn-primary">Start a Project</a>
+                    <a href="#cta" class="btn-outline">Book a Call</a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <canvas id="hero-canvas"></canvas>
+            <div class="canvas-hint">
+                <div class="hint-dot"></div>Drag to explore · Click to interact
+            </div>
+        </div>
+        <div class="cube-controls">
+            <button class="cube-btn active" data-mode="spin">Auto Spin</button>
+            <button class="cube-btn" data-mode="explode">Explode</button>
+            <button class="cube-btn" data-mode="wire">Wireframe</button>
+            <button class="cube-btn" data-mode="reset">Reset</button>
+        </div>
+    </section>
+
+    <script src="src/js/cube.js"></script>
+
+    <!-- TRUST -->
+    <section id="trust">
+        <div class="container">
+            <div class="trust-inner">
+                <span class="trust-label">Trusted by</span>
+                <div class="logo-strip">
+                    <span class="logo-item"><img src="/src/assets/elscore-logo.png" alt=""></span>
+                    <span class="logo-item"><img src="/src/assets/simak-logo.png" alt=""></span>
+                    <span class="logo-item"><img src="/src/assets/vesdm-logo.png" alt=""></span>
+                    <!-- <span class="logo-item"><img src="/src/assets/manjeri-logo.png" alt=""></span> -->
+                    <!-- <span class="logo-item"><img src="/src/assets/asian-logo.png" alt=""></span> -->
+                    <span class="logo-item"><img src="/src/assets/sifon-logo.png" alt=""></span>
+                    <span class="logo-item"><img src="/src/assets/enencia-logo.png" alt=""></span>
+                    <span class="logo-item"><img src="/src/assets/livora-logo.png" alt=""></span>
+                    <span class="logo-item"><img src="/src/assets/sandm-logo.png" alt=""></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services">
+        <div class="container">
+            <div class="services-header">
+                <div>
+                    <div class="section-tag reveal">Solutions</div>
+                    <h2 class="section-heading reveal reveal-delay-1">Three ways we<br />accelerate growth.</h2>
+                </div>
+                <p class="section-sub reveal reveal-delay-2">Every engagement starts with your business goal — not a
+                    tech stack. We work backwards from outcomes.</p>
+            </div>
+            <div class="service-groups">
+                <div class="service-group reveal">
+                    <div class="sg-number">01 — BUILD</div>
+                    <div class="sg-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5">
+                            <rect x="3" y="3" width="18" height="18" rx="2" />
+                            <path d="M3 9h18M9 21V9" />
+                        </svg></div>
+                    <div class="sg-title">Build</div>
+                    <p class="sg-desc">Digital foundations that are engineered to last — and grow. We create the
+                        platforms your customers love.</p>
+                    <ul class="sg-items">
+                        <li>Web Platforms & Applications</li>
+                        <li>Mobile Apps (iOS & Android)</li>
+                        <li>SaaS Product Development</li>
+                        <li>E-commerce Systems</li>
+                    </ul>
+                </div>
+                <div class="service-group reveal reveal-delay-1">
+                    <div class="sg-number">02 — AUTOMATE</div>
+                    <div class="sg-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5">
+                            <path
+                                d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" />
+                        </svg></div>
+                    <div class="sg-title">Automate</div>
+                    <p class="sg-desc">Replace manual effort with intelligent systems. Reclaim time, eliminate errors,
+                        and scale operations without scaling headcount.</p>
+                    <ul class="sg-items">
+                        <li>Custom Internal Tools</li>
+                        <li>Business Process Automation</li>
+                        <li>CRM & ERP Integrations</li>
+                        <li>Data Pipelines & Reporting</li>
+                    </ul>
+                </div>
+                <div class="service-group reveal reveal-delay-2">
+                    <div class="sg-number">03 — SCALE</div>
+                    <div class="sg-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5">
+                            <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
+                            <polyline points="17 6 23 6 23 12" />
+                        </svg></div>
+                    <div class="sg-title">Scale</div>
+                    <p class="sg-desc">Leverage AI and intelligent architecture to grow beyond what manual systems can
+                        handle. Compete at a higher level.</p>
+                    <ul class="sg-items">
+                        <li>AI-Powered Solutions</li>
+                        <li>LLM Integrations & Agents</li>
+                        <li>Performance Optimization</li>
+                        <li>Technical Architecture Review</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DIFFERENTIATION -->
+    <section id="diff">
+        <div class="container">
+            <div class="diff-grid">
+                <div class="diff-left">
+                    <div class="section-tag reveal">Why NOXWING</div>
+                    <div class="diff-statement reveal reveal-delay-1">We don't sell hours.<br />We deliver <span
+                            class="hl">outcomes.</span></div>
+                    <p class="diff-para reveal reveal-delay-2">Most dev shops take your brief, build the spec, and hand
+                        it back. We think differently. Every project starts with a business outcome — then we engineer
+                        backwards to find the most precise, scalable solution.</p>
+                    <p class="diff-para reveal reveal-delay-3">We think in systems. We build for 10x. We stay
+                        accountable for results.</p>
+                    <a href="#cta" class="diff-cta-link reveal reveal-delay-4">Talk to our team →</a>
+                </div>
+                <div class="diff-right reveal reveal-delay-2">
+                    <div class="diff-pillars">
+                        <div class="diff-pillar">
+                            <div class="dp-icon">◎</div>
+                            <div class="dp-title">Outcome-First Thinking</div>
+                            <p class="dp-text">We align every tech decision to a business metric. Features don't ship
+                                unless they drive results.</p>
+                        </div>
+                        <div class="diff-pillar">
+                            <div class="dp-icon">⬡</div>
+                            <div class="dp-title">Scalable Architecture</div>
+                            <p class="dp-text">Systems designed to handle 10x your current load. No rewrites 18 months
+                                later.</p>
+                        </div>
+                        <div class="diff-pillar">
+                            <div class="dp-icon">◈</div>
+                            <div class="dp-title">Long-Term Partnership</div>
+                            <p class="dp-text">We're not a vendor. We're an extension of your team — invested in your
+                                long-term success.</p>
+                        </div>
+                        <div class="diff-pillar">
+                            <div class="dp-icon">◉</div>
+                            <div class="dp-title">Senior-Led Execution</div>
+                            <p class="dp-text">No juniors doing senior work. Your project is led by experienced
+                                engineers and strategists.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section id="process">
+        <div class="container">
+            <div style="text-align:center;max-width:560px;margin:0 auto 0;">
+                <div class="section-tag reveal" style="justify-content:center;">How We Work</div>
+                <h2 class="section-heading reveal reveal-delay-1">From idea to impact,<br />in four steps.</h2>
+            </div>
+            <div class="process-steps">
+                <div class="process-step reveal">
+                    <div class="ps-num">01</div>
+                    <div class="ps-title">Discover</div>
+                    <p class="ps-text">Deep-dive into your business, goals, and existing systems. We map the landscape
+                        before touching a keyboard.</p>
+                    <div class="ps-connector"></div>
+                </div>
+                <div class="process-step reveal reveal-delay-1">
+                    <div class="ps-num">02</div>
+                    <div class="ps-title">Strategize</div>
+                    <p class="ps-text">Translate business goals into a precise technical roadmap. Architecture decisions
+                        made before development begins.</p>
+                    <div class="ps-connector"></div>
+                </div>
+                <div class="process-step reveal reveal-delay-2">
+                    <div class="ps-num">03</div>
+                    <div class="ps-title">Build</div>
+                    <p class="ps-text">Iterative, transparent development with weekly deliverables. You see progress
+                        every step of the way.</p>
+                    <div class="ps-connector"></div>
+                </div>
+                <div class="process-step reveal reveal-delay-3">
+                    <div class="ps-num">04</div>
+                    <div class="ps-title">Scale</div>
+                    <p class="ps-text">Post-launch support, monitoring, and optimization. We grow with you as your
+                        business expands.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WORK -->
+    <!-- <section id="work">
+        <div class="container">
+            <div class="services-header">
+                <div>
+                    <div class="section-tag reveal">Featured Work</div>
+                    <h2 class="section-heading reveal reveal-delay-1">Built for impact,<br />designed to last.</h2>
+                </div>
+                <a href="#cta" class="btn-outline reveal reveal-delay-2" style="align-self:flex-end;">View All Work</a>
+            </div>
+            <div class="work-grid">
+                <div class="work-card reveal">
+                    <div class="wc-visual wc-bg-1">
+                        <div class="wc-overlay"></div>
+                        <div class="wc-pattern">
+                            <div class="wc-bar" style="height:40%"></div>
+                            <div class="wc-bar" style="height:65%"></div>
+                            <div class="wc-bar" style="height:50%"></div>
+                            <div class="wc-bar" style="height:80%"></div>
+                            <div class="wc-bar" style="height:60%"></div>
+                            <div class="wc-bar" style="height:90%"></div>
+                            <div class="wc-bar" style="height:70%"></div>
+                            <div class="wc-bar" style="height:100%"></div>
+                        </div>
+                    </div>
+                    <div class="wc-body">
+                        <div class="wc-tags"><span class="wc-tag">SaaS</span><span class="wc-tag">Web App</span></div>
+                        <div class="wc-title">Velotech Analytics Platform</div>
+                        <p class="wc-desc">End-to-end SaaS platform for logistics companies. Real-time tracking,
+                            reporting, and route optimization.</p>
+                        <div class="wc-result">187% revenue growth in 8 months</div>
+                    </div>
+                </div>
+                <div class="work-card reveal reveal-delay-1">
+                    <div class="wc-visual wc-bg-2" style="align-items:center;justify-content:center;">
+                        <div class="wc-overlay"></div>
+                        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:24px;width:100%;">
+                            <div style="height:60px;background:var(--border);border-radius:6px;"></div>
+                            <div style="height:60px;background:var(--border-green);border-radius:6px;opacity:.5;"></div>
+                            <div style="height:60px;background:var(--border);border-radius:6px;"></div>
+                            <div style="height:80px;grid-column:1/3;background:var(--border);border-radius:6px;"></div>
+                            <div style="height:80px;background:var(--border-green);border-radius:6px;opacity:.3;"></div>
+                        </div>
+                    </div>
+                    <div class="wc-body">
+                        <div class="wc-tags"><span class="wc-tag">Mobile App</span><span class="wc-tag">iOS &
+                                Android</span></div>
+                        <div class="wc-title">Arcform Field Operations</div>
+                        <p class="wc-desc">Mobile-first operations platform for field teams. Offline-capable, real-time
+                            sync, and custom workflows.</p>
+                        <div class="wc-result">60% reduction in operational overhead</div>
+                    </div>
+                </div>
+                <div class="work-card reveal reveal-delay-2">
+                    <div class="wc-visual wc-bg-3">
+                        <div class="wc-overlay"></div>
+                        <div style="padding:24px;width:100%;">
+                            <div
+                                style="height:12px;background:var(--border-green);border-radius:3px;width:60%;margin-bottom:8px;opacity:.6;">
+                            </div>
+                            <div
+                                style="height:8px;background:var(--border);border-radius:3px;width:90%;margin-bottom:6px;">
+                            </div>
+                            <div
+                                style="height:8px;background:var(--border);border-radius:3px;width:75%;margin-bottom:6px;">
+                            </div>
+                            <div
+                                style="height:8px;background:var(--border);border-radius:3px;width:80%;margin-bottom:20px;">
+                            </div>
+                            <div style="display:flex;gap:8px;">
+                                <div style="height:32px;flex:1;background:var(--green);border-radius:4px;opacity:.7;">
+                                </div>
+                                <div style="height:32px;flex:1;background:var(--border);border-radius:4px;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wc-body">
+                        <div class="wc-tags"><span class="wc-tag">Automation</span><span class="wc-tag">AI</span></div>
+                        <div class="wc-title">Stratiq AI Workflow Engine</div>
+                        <p class="wc-desc">AI-powered document processing and workflow automation. Eliminated manual
+                            data entry across 6 departments.</p>
+                        <div class="wc-result">40 hours per week saved in manual work</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- TESTIMONIALS -->
+    <!-- <section id="testimonials">
+        <div class="container">
+            <div style="text-align:center;max-width:520px;margin:0 auto 48px;">
+                <div class="section-tag reveal" style="justify-content:center;">What Clients Say</div>
+                <h2 class="section-heading reveal reveal-delay-1">Results speak<br />for themselves.</h2>
+            </div>
+            <div class="testi-grid">
+                <div class="testi-card reveal">
+                    <div class="testi-quote">"</div>
+                    <p class="testi-text">NOXWING didn't just build our platform — they completely changed how we think
+                        about using technology as a growth lever. The ROI was visible within the first quarter.</p>
+                    <div class="testi-author">
+                        <div class="testi-avatar">MR</div>
+                        <div>
+                            <div class="testi-name">Marcus Reid</div>
+                            <div class="testi-role">CEO, Velotech Group</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testi-card reveal reveal-delay-1">
+                    <div class="testi-quote">"</div>
+                    <p class="testi-text">We interviewed six agencies. NOXWING was the only one that came in with a
+                        business strategy before a tech proposal. That set the tone for the entire partnership.</p>
+                    <div class="testi-author">
+                        <div class="testi-avatar">SL</div>
+                        <div>
+                            <div class="testi-name">Sarah Lin</div>
+                            <div class="testi-role">Founder, Arcform</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testi-card reveal reveal-delay-2">
+                    <div class="testi-quote">"</div>
+                    <p class="testi-text">The automation system they built saves us over 40 hours a week. It's not just
+                        time — it's accuracy, consistency, and the ability to scale without hiring more operations
+                        staff.</p>
+                    <div class="testi-author">
+                        <div class="testi-avatar">AK</div>
+                        <div>
+                            <div class="testi-name">Arjun Kapoor</div>
+                            <div class="testi-role">COO, Stratiq</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- CONTACT / CTA -->
+    <section id="cta">
+        <div class="container">
+            <div class="cta-grid">
+
+                <!-- Left: intro + contact details -->
+                <div>
+                    <div class="section-tag reveal">Ready to Scale?</div>
+                    <h2 class="cta-headline reveal reveal-delay-1">Let's build something that grows your business.</h2>
+                    <p class="cta-sub reveal reveal-delay-2">Tell us where you want to be. We'll engineer the path to
+                        get there. No fluff — just outcomes.</p>
+
+                    <div class="cta-contact-items reveal reveal-delay-3">
+                        <div class="cta-contact-item">
+                            <div class="cta-contact-icon">
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.5">
+                                    <path
+                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                    <polyline points="22,6 12,13 2,6" />
+                                </svg>
+                            </div>
+                            <div>
+                                <div
+                                    style="font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--text-dim);margin-bottom:3px;">
+                                    Email</div>
+                                <a href="mailto:noxwing.official@gmail.com">noxwing.official@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="cta-contact-item">
+                            <div class="cta-contact-icon">
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.5">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                                </svg>
+                            </div>
+                            <div>
+                                <div
+                                    style="font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--text-dim);margin-bottom:3px;">
+                                    Instagram</div>
+                                <a href="https://www.instagram.com/noxwing.co/" target="_blank"
+                                    rel="noopener noreferrer">@noxwing.co</a>
+                            </div>
+                        </div>
+                        <div class="cta-contact-item">
+                            <div class="cta-contact-icon">
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.5">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <path
+                                        d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <div
+                                    style="font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--text-dim);margin-bottom:3px;">
+                                    Website</div>
+                                <a href="https://www.noxwing.site/" target="_blank"
+                                    rel="noopener noreferrer">www.noxwing.site</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Web3Forms form -->
+                <div class="reveal reveal-delay-2">
+                    <div class="contact-form-wrap">
+                        <div class="form-title">Start a Project</div>
+                        <div class="form-subtitle">We'll get back to you within 24 hours.</div>
+
+                        <form id="contact-form" novalidate>
+                            <!-- ⚠️  Replace with your real Web3Forms access key from https://web3forms.com -->
+                            <input type="hidden" name="access_key" value="c7e98128-45da-474f-b978-e6ba50c35519" />
+                            <input type="hidden" name="subject" value="New Project Inquiry — NOXWING" />
+                            <input type="hidden" name="from_name" value="NOXWING Website" />
+                            <input type="hidden" name="redirect" value="false" />
+                            <!-- Honeypot anti-spam -->
+                            <input type="checkbox" name="botcheck" style="display:none;" tabindex="-1"
+                                autocomplete="off" />
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="form-label" for="f-name">Name *</label>
+                                    <input type="text" id="f-name" name="name" class="form-input"
+                                        placeholder="John Smith" required />
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" for="f-email">Email *</label>
+                                    <input type="email" id="f-email" name="email" class="form-input"
+                                        placeholder="john@company.com" required />
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label" for="f-company">Company / Project Name</label>
+                                <input type="text" id="f-company" name="company" class="form-input"
+                                    placeholder="Acme Corp" />
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label" for="f-service">What do you need?</label>
+                                <select id="f-service" name="service" class="form-select">
+                                    <option value="" disabled selected>Select a service…</option>
+                                    <option>Web Platform / Application</option>
+                                    <option>Mobile App (iOS & Android)</option>
+                                    <option>SaaS Product Development</option>
+                                    <option>Business Process Automation</option>
+                                    <option>AI Solutions & LLM Integration</option>
+                                    <option>Technical Architecture Review</option>
+                                    <option>Other / Not Sure Yet</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group" style="margin-bottom:0;">
+                                <label class="form-label" for="f-message">Tell us about your project *</label>
+                                <textarea id="f-message" name="message" class="form-textarea"
+                                    placeholder="Describe your goals, timeline, and any relevant details…"
+                                    required></textarea>
+                            </div>
+
+                            <div class="form-submit-row">
+                                <button type="submit" class="btn-submit" id="submit-btn">
+                                    <div class="btn-spinner" id="btn-spinner"></div>
+                                    <span id="btn-text">Send Message</span>
+                                    <svg id="btn-icon" width="13" height="13" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2.5">
+                                        <path d="M5 12h14M12 5l7 7-7 7" />
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <div class="form-alert success" id="form-success">
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                                    <polyline points="22 4 12 14.01 9 11.01" />
+                                </svg>
+                                <span>Your message was sent! We'll be in touch within 24 hours.</span>
+                            </div>
+                            <div class="form-alert error" id="form-error">
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <line x1="12" y1="8" x2="12" y2="12" />
+                                    <line x1="12" y1="16" x2="12.01" y2="16" />
+                                </svg>
+                                <span id="form-error-text">Something went wrong. Please try again or email us
+                                    directly.</span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="footer-logo">NOX<span>WING</span></div>
+                    <p class="footer-tagline">Technology partner for founders and business owners building for tomorrow.
+                    </p>
+                </div>
+                <div class="footer-cols">
+                    <div>
+                        <div class="footer-col-title">Solutions</div>
+                        <ul class="footer-links">
+                            <li><a href="#services">Web Platforms</a></li>
+                            <li><a href="#services">Mobile Apps</a></li>
+                            <li><a href="#services">SaaS Development</a></li>
+                            <li><a href="#services">Automation</a></li>
+                            <li><a href="#services">AI Solutions</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="footer-col-title">Company</div>
+                        <ul class="footer-links">
+                            <li><a href="#diff">About</a></li>
+                            <!-- <li><a href="#work">Work</a></li> -->
+                            <li><a href="#process">Process</a></li>
+                            <!-- <li><a href="#testimonials">Clients</a></li> -->
+                        </ul>
+                    </div>
+                    <div style="grid-column: 1 / -1">
+                        <div class="footer-col-title">Contact</div>
+                        <ul class="footer-links">
+                            <li><a href="mailto:noxwing.official@gmail.com">noxwing.official@gmail.com</a></li>
+                            <li><a href="https://www.instagram.com/noxwing.co/" target="_blank"
+                                    rel="noopener noreferrer">Instagram @noxwing.co</a></li>
+                            <li><a href="https://www.noxwing.site/" target="_blank"
+                                    rel="noopener noreferrer">noxwing.site</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span class="footer-copy">© 2025 NOXWING. All rights reserved.</span>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="src/js/main.js"></script>
+</body>
+
+</html>
