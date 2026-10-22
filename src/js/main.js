@@ -3,6 +3,8 @@
   const loader = document.getElementById("page-loader");
   const bar = document.getElementById("loader-bar");
   const label = document.getElementById("loader-label");
+  if (!loader || !bar || !label) return;
+
   const stages = [
     { pct: 15, text: "Loading assets…" },
     { pct: 38, text: "Building interface…" },
@@ -29,27 +31,31 @@
 
 /* ── NAV SCROLL ── */
 const navbar = document.getElementById("navbar");
-window.addEventListener("scroll", () => {
-  navbar.classList.toggle("scrolled", window.scrollY > 40);
-});
+if (navbar) {
+  window.addEventListener("scroll", () => {
+    navbar.classList.toggle("scrolled", window.scrollY > 40);
+  });
+}
 
 /* ── MOBILE MENU ── */
 const hamburger = document.getElementById("nav-hamburger");
 const mobileMenu = document.getElementById("mobile-menu");
 
-hamburger.addEventListener("click", () => {
-  const isOpen = mobileMenu.classList.toggle("open");
-  hamburger.classList.toggle("open", isOpen);
-  document.body.style.overflow = isOpen ? "hidden" : "";
-});
-
-document.querySelectorAll(".mobile-nav-link").forEach((link) => {
-  link.addEventListener("click", () => {
-    mobileMenu.classList.remove("open");
-    hamburger.classList.remove("open");
-    document.body.style.overflow = "";
+if (hamburger && mobileMenu) {
+  hamburger.addEventListener("click", () => {
+    const isOpen = mobileMenu.classList.toggle("open");
+    hamburger.classList.toggle("open", isOpen);
+    document.body.style.overflow = isOpen ? "hidden" : "";
   });
-});
+
+  document.querySelectorAll(".mobile-nav-link").forEach((link) => {
+    link.addEventListener("click", () => {
+      mobileMenu.classList.remove("open");
+      hamburger.classList.remove("open");
+      document.body.style.overflow = "";
+    });
+  });
+}
 
 /* ── SCROLL REVEAL ── */
 const observer = new IntersectionObserver(
@@ -64,76 +70,89 @@ document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
 
 /* ── WEB3FORMS ── */
 const contactForm = document.getElementById("contact-form");
-const submitBtn = document.getElementById("submit-btn");
-const btnText = document.getElementById("btn-text");
-const btnIcon = document.getElementById("btn-icon");
-const btnSpinner = document.getElementById("btn-spinner");
-const successEl = document.getElementById("form-success");
-const errorEl = document.getElementById("form-error");
-const errorTextEl = document.getElementById("form-error-text");
+if (contactForm) {
+  const submitBtn = document.getElementById("submit-btn");
+  const btnText = document.getElementById("btn-text");
+  const btnIcon = document.getElementById("btn-icon");
+  const btnSpinner = document.getElementById("btn-spinner");
+  const successEl = document.getElementById("form-success");
+  const errorEl = document.getElementById("form-error");
+  const errorTextEl = document.getElementById("form-error-text");
 
-function setLoading(on) {
-  submitBtn.disabled = on;
-  if (on) {
-    submitBtn.classList.add("loading");
-    btnSpinner.style.display = "block";
-    btnText.textContent = "Sending…";
-    btnIcon.style.display = "none";
-  } else {
-    submitBtn.classList.remove("loading");
-    btnSpinner.style.display = "none";
-    btnText.textContent = "Send Message";
-    btnIcon.style.display = "";
+  function setLoading(on) {
+    if (!submitBtn) return;
+    submitBtn.disabled = on;
+    if (on) {
+      submitBtn.classList.add("loading");
+      if (btnSpinner) btnSpinner.style.display = "block";
+      if (btnText) btnText.textContent = "Sending…";
+      if (btnIcon) btnIcon.style.display = "none";
+    } else {
+      submitBtn.classList.remove("loading");
+      if (btnSpinner) btnSpinner.style.display = "none";
+      if (btnText) btnText.textContent = "Send Message";
+      if (btnIcon) btnIcon.style.display = "";
+    }
   }
-}
-function hideAlerts() {
-  successEl.classList.remove("show");
-  errorEl.classList.remove("show");
-}
+  function hideAlerts() {
+    if (successEl) successEl.classList.remove("show");
+    if (errorEl) errorEl.classList.remove("show");
+  }
 
-contactForm.addEventListener("submit", async function (e) {
-  e.preventDefault();
-  hideAlerts();
-  const name = document.getElementById("f-name").value.trim();
-  const email = document.getElementById("f-email").value.trim();
-  const message = document.getElementById("f-message").value.trim();
-  if (!name || !email || !message) {
-    errorTextEl.textContent = "Please fill in your name, email, and message.";
-    errorEl.classList.add("show");
-    return;
-  }
-  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-    errorTextEl.textContent = "Please enter a valid email address.";
-    errorEl.classList.add("show");
-    return;
-  }
-  setLoading(true);
-  try {
-    const data = Object.fromEntries(new FormData(contactForm).entries());
-    const res = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify(data),
-    });
-    const result = await res.json();
-    if (result.success) {
-      successEl.classList.add("show");
-      contactForm.reset();
-      successEl.scrollIntoView({ behavior: "smooth", block: "nearest" });
-    } else throw new Error(result.message || "Submission failed");
-  } catch (err) {
-    errorTextEl.textContent =
-      err.message && err.message !== "Failed to fetch"
-        ? err.message
-        : "Something went wrong. Please email noxwing.official@gmail.com directly.";
-    errorEl.classList.add("show");
-  } finally {
-    setLoading(false);
-  }
-});
-contactForm
-  .querySelectorAll("input,textarea,select")
-  .forEach((el) => el.addEventListener("input", hideAlerts));
+  contactForm.addEventListener("submit", async function (e) {
+    e.preventDefault();
+    hideAlerts();
+    const nameInput = document.getElementById("f-name");
+    const emailInput = document.getElementById("f-email");
+    const messageInput = document.getElementById("f-message");
+
+    const name = nameInput ? nameInput.value.trim() : "";
+    const email = emailInput ? emailInput.value.trim() : "";
+    const message = messageInput ? messageInput.value.trim() : "";
+
+    if (!name || !email || !message) {
+      if (errorTextEl) errorTextEl.textContent = "Please fill in your name, email, and message.";
+      if (errorEl) errorEl.classList.add("show");
+      return;
+    }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      if (errorTextEl) errorTextEl.textContent = "Please enter a valid email address.";
+      if (errorEl) errorEl.classList.add("show");
+      return;
+    }
+    setLoading(true);
+    try {
+      const data = Object.fromEntries(new FormData(contactForm).entries());
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+      const result = await res.json();
+      if (result.success) {
+        if (successEl) {
+          successEl.classList.add("show");
+          contactForm.reset();
+          successEl.scrollIntoView({ behavior: "smooth", block: "nearest" });
+        }
+      } else throw new Error(result.message || "Submission failed");
+    } catch (err) {
+      if (errorTextEl) {
+        errorTextEl.textContent =
+          err.message && err.message !== "Failed to fetch"
+            ? err.message
+            : "Something went wrong. Please email noxwing.official@gmail.com directly.";
+      }
+      if (errorEl) errorEl.classList.add("show");
+    } finally {
+      setLoading(false);
+    }
+  });
+
+  contactForm
+    .querySelectorAll("input,textarea,select")
+    .forEach((el) => el.addEventListener("input", hideAlerts));
+}
